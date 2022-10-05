@@ -1,3 +1,5 @@
+import { SecureModule } from './secure/secure.module';
+import { PublicModule } from './public/public.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,7 +12,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PublicModule,
+    SecureModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
