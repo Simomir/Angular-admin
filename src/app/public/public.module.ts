@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicComponent } from './public.component';
@@ -13,7 +14,8 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class PublicModule { }
