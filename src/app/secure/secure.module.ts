@@ -1,3 +1,5 @@
+import { MenuComponent } from './menu/menu.component';
+import { NavComponent } from './nav/nav.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SecureComponent } from './secure.component';
@@ -6,7 +8,9 @@ import { SecureComponent } from './secure.component';
 
 @NgModule({
   declarations: [
-    SecureComponent
+    SecureComponent,
+    NavComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule
