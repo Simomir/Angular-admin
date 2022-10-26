@@ -13,4 +13,8 @@ export class AuthService {
   register(data: any): Observable<any> {
     return this.http.post(`${environment.api}/register`, data)
   }
+
+  login(data: any): Observable<any> {
+    return this.http.post(`${environment.api}/login`, data, {withCredentials: true})
+  }
 }
