@@ -22,4 +22,8 @@ export class AuthService {
   user(): Observable<User> {
     return this.http.get<User>(`${environment.api}/user`, {withCredentials: true});
   }
+
+  logout(): Observable<any> {
+    return this.http.post(`${environment.api}/logout`, {}, {withCredentials: true});
+  }
 }
