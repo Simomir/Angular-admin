@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
-import {environment} from "../../../environments/environment";
 import {AuthService} from "../../services/auth.service";
 
 @Component({
@@ -10,14 +9,6 @@ import {AuthService} from "../../services/auth.service";
   styleUrls: ['./register.component.css', './../public.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  // form: FormGroup = this.formBuilder.group({
-  //   first_name: [''],
-  //   last_name: [''],
-  //   email: [''],
-  //   password: [''],
-  //   password_confirm: ['']
-  // })
 
   form!: FormGroup;
 
