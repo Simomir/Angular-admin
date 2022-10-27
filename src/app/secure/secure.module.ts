@@ -7,6 +7,7 @@ import { RouterModule } from "@angular/router";
 import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatTableModule } from "@angular/material/table";
 
 
 
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
+    MatTableModule
   ]
 })
 export class SecureModule { }

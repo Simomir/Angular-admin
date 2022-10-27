@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from "../../services/user.service";
-import { User } from "../../interfaces/user";
+import { MatTableDataSource } from "@angular/material/table";
 
 @Component({
   selector: 'app-users',
@@ -8,13 +8,13 @@ import { User } from "../../interfaces/user";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users: User[] = [];
+  dataSource = new MatTableDataSource();
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.userService.all().subscribe({
-      next: users => this.users = users
+      next: users => { this.dataSource.data = users; }
     });
   }
 
