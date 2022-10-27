@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
 import { Emitters } from "../../emitters/emitters";
-import { User } from "../../interfaces/user";
 
 @Component({
   selector: 'app-profile',
