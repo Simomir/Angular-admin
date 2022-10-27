@@ -8,6 +8,7 @@ import { MatTableDataSource } from "@angular/material/table";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  columns = ['ID', 'Name', 'Email', 'Actions'];
   dataSource = new MatTableDataSource();
 
   constructor(private userService: UserService) { }
