@@ -4,9 +4,16 @@ import { PublicComponent } from './public/public.component';
 import { SecureComponent } from './secure/secure.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from "./secure/profile/profile.component";
 
 const routes: Routes = [
-  {path: '', component: SecureComponent},
+  {
+    path: '',
+    component: SecureComponent,
+    children: [
+      {path: 'profile', component: ProfileComponent}
+    ]
+  },
   {
     path: '',
     component: PublicComponent,
