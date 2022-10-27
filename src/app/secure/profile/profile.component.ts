@@ -24,14 +24,18 @@ export class ProfileComponent implements OnInit {
       password: '',
       password_confirm: '',
     });
+
+    this.authService.user().subscribe({
+      next: user => {this.infoForm.patchValue(user);}
+    })
   }
 
   infoSubmit(): void {
-
+    this.authService.updateInfo(this.infoForm.getRawValue()).subscribe(user => console.log(user));
   }
 
   passwordSubmit(): void {
-
+    this.authService.updatePassword(this.passwordForm.getRawValue()).subscribe(user => console.log(user));
   }
 
 }
