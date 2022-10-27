@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SecureComponent } from './secure.component';
 import { RouterModule } from "@angular/router";
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from "@angular/router";
   declarations: [
     SecureComponent,
     NavComponent,
-    MenuComponent
+    MenuComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
