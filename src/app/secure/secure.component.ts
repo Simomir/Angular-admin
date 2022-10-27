@@ -12,11 +12,9 @@ export class SecureComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    this.authService.user().subscribe(
-      user => {
-        console.log(user);
-      },
-      error => {this.router.navigate( [ '/login' ] ).then();}
-    );
+    this.authService.user().subscribe({
+      next: (user) => { console.log(user); },
+      error: () => { this.router.navigate( [ '/login' ] ).then(); }
+    });
   }
 }
