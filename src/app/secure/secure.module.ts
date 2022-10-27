@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatTableModule } from "@angular/material/table";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 
 
@@ -23,7 +24,8 @@ import { MatTableModule } from "@angular/material/table";
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    FontAwesomeModule,
   ]
 })
 export class SecureModule { }
