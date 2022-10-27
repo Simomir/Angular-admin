@@ -5,13 +5,15 @@ import { SecureComponent } from './secure/secure.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from "./secure/profile/profile.component";
+import { UsersComponent } from "./secure/users/users.component";
 
 const routes: Routes = [
   {
     path: '',
     component: SecureComponent,
     children: [
-      {path: 'profile', component: ProfileComponent}
+      {path: 'profile', component: ProfileComponent},
+      {path: 'users', component: UsersComponent},
     ]
   },
   {
