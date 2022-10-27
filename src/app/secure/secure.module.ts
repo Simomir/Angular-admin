@@ -6,6 +6,7 @@ import { SecureComponent } from './secure.component';
 import { RouterModule } from "@angular/router";
 import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 
@@ -19,7 +20,8 @@ import { UsersComponent } from './users/users.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
   ]
 })
 export class SecureModule { }
