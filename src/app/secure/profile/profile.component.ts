@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
+import { AuthService } from "../../services/auth.service";
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +11,7 @@ export class ProfileComponent implements OnInit {
   infoForm!: FormGroup;
   passwordForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.infoForm = this.formBuilder.group({
@@ -23,6 +24,14 @@ export class ProfileComponent implements OnInit {
       password: '',
       password_confirm: '',
     });
+  }
+
+  infoSubmit(): void {
+
+  }
+
+  passwordSubmit(): void {
+
   }
 
 }
