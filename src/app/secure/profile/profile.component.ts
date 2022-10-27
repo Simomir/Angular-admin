@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
+import { Emitters } from "../../emitters/emitters";
+import { User } from "../../interfaces/user";
 
 @Component({
   selector: 'app-profile',
@@ -25,9 +27,10 @@ export class ProfileComponent implements OnInit {
       password_confirm: '',
     });
 
-    this.authService.user().subscribe({
-      next: user => {this.infoForm.patchValue(user);}
+    Emitters.authEmitter.subscribe({
+      next: ( user: { [key: string]: any; }) => {this.infoForm.patchValue(user);}
     })
+
   }
 
   infoSubmit(): void {
