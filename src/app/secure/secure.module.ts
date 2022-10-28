@@ -12,6 +12,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { LinksComponent } from './links/links.component';
 import { MatButtonModule } from "@angular/material/button";
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatButtonModule } from "@angular/material/button";
     MenuComponent,
     ProfileComponent,
     UsersComponent,
-    LinksComponent
+    LinksComponent,
+    ProductsComponent,
   ],
   imports: [
     CommonModule,
