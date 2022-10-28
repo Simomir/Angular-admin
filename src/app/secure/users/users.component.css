@@ -19,3 +19,7 @@ table {
 .mat-column-Name, .mat-column-Email {
   border-right: 1px solid currentColor;
 }
+
+ td + td, th + th, th, td {
+  border-bottom: 1px solid currentColor;
+}
