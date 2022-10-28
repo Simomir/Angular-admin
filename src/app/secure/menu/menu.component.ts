@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faBagShopping, faUsers } from "@fortawesome/free-solid-svg-icons";
+
 
 @Component({
   selector: 'app-menu',
@@ -8,6 +9,7 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 })
 export class MenuComponent implements OnInit {
   users_icon = faUsers;
+  productsIcon = faBagShopping;
 
   constructor() { }
 
