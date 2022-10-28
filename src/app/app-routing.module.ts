@@ -6,15 +6,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from "./secure/profile/profile.component";
 import { UsersComponent } from "./secure/users/users.component";
+import { LinksComponent } from "./secure/links/links.component";
 
 const routes: Routes = [
   {
     path: '',
     component: SecureComponent,
     children: [
-      {path: '', pathMatch: 'full', redirectTo: 'users'},
-      {path: 'profile', component: ProfileComponent},
-      {path: 'users', component: UsersComponent},
+      { path: '', pathMatch: 'full', redirectTo: 'users' },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'users/:id/links', component: LinksComponent }
     ]
   },
   {
