@@ -15,3 +15,7 @@ table {
   padding-left: 16px;
   font-size: 20px;
 }
+
+.mat-column-Name, .mat-column-Email {
+  border-right: 1px solid currentColor;
+}
