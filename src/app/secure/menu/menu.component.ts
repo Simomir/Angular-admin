@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faBagShopping, faUsers } from "@fortawesome/free-solid-svg-icons";
 
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
