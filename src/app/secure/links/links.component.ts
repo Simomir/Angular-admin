@@ -22,4 +22,8 @@ export class LinksComponent implements OnInit {
     });
   }
 
+  sum(orders: any[]): number {
+    return orders.reduce((total, order) => total + order.total, 0);
+  }
+
 }
