@@ -9,6 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatTableModule } from "@angular/material/table";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { MatPaginatorModule } from "@angular/material/paginator";
 
 
 
@@ -26,6 +27,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     ReactiveFormsModule,
     MatTableModule,
     FontAwesomeModule,
+    MatPaginatorModule
   ]
 })
 export class SecureModule { }
