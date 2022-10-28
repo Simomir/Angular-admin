@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { MatTableModule } from "@angular/material/table";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { MatPaginatorModule } from "@angular/material/paginator";
+import { LinksComponent } from './links/links.component';
 
 
 
@@ -19,7 +20,8 @@ import { MatPaginatorModule } from "@angular/material/paginator";
     NavComponent,
     MenuComponent,
     ProfileComponent,
-    UsersComponent
+    UsersComponent,
+    LinksComponent
   ],
   imports: [
     CommonModule,
