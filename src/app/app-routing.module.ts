@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from "./secure/profile/profile.component";
 import { UsersComponent } from "./secure/users/users.component";
 import { LinksComponent } from "./secure/links/links.component";
+import { ProductsComponent } from "./secure/products/products.component";
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'users' },
       { path: 'profile', component: ProfileComponent },
       { path: 'users', component: UsersComponent },
-      { path: 'users/:id/links', component: LinksComponent }
+      { path: 'users/:id/links', component: LinksComponent },
+      { path: 'products', component: ProductsComponent },
     ]
   },
   {
