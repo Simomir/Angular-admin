@@ -13,8 +13,6 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { LinksComponent } from './links/links.component';
 import { MatButtonModule } from "@angular/material/button";
 
-
-
 @NgModule({
   declarations: [
     SecureComponent,
