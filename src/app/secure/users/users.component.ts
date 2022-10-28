@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { UserService } from "../../services/user.service";
 import { MatTableDataSource } from "@angular/material/table";
 import { MatPaginator } from "@angular/material/paginator";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-users',
@@ -12,6 +13,7 @@ export class UsersComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   columns: string[] = ['ID', 'Name', 'Email', 'Actions'];
   dataSource = new MatTableDataSource();
+  linkIcon = faLink;
 
   constructor(private userService: UserService) { }
 

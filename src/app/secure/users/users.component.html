@@ -16,7 +16,7 @@
       <th mat-header-cell *matHeaderCellDef>Actions</th>
       <td mat-cell *matCellDef="let user">
         <a [routerLink]="['/users', user.id, 'links']" mat-stroked-button color="primary">
-          View
+          <fa-icon [icon]="linkIcon"></fa-icon> View
         </a>
       </td>
     </ng-container>
