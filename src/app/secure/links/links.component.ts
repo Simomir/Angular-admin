@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
 import { LinkService } from "../../services/link.service";
 import { ActivatedRoute } from "@angular/router";
+import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-links',
@@ -12,6 +13,7 @@ export class LinksComponent implements OnInit {
   columns: string[] = ['ID', 'code', 'count', 'revenue'];
   dataSource = new MatTableDataSource();
   userID!: number;
+  dollarIcon = faDollarSign;
 
   constructor(private linkService: LinkService, private route: ActivatedRoute) { }
 
