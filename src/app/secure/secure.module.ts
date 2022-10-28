@@ -11,6 +11,7 @@ import { MatTableModule } from "@angular/material/table";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { LinksComponent } from './links/links.component';
+import { MatButtonModule } from "@angular/material/button";
 
 
 
@@ -29,7 +30,8 @@ import { LinksComponent } from './links/links.component';
     ReactiveFormsModule,
     MatTableModule,
     FontAwesomeModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatButtonModule,
   ]
 })
 export class SecureModule { }

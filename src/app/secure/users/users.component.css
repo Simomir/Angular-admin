@@ -23,3 +23,7 @@ table {
  td + td, th + th, th, td {
   border-bottom: 1px solid currentColor;
 }
+
+a {
+  margin-top: 5px;
+}
