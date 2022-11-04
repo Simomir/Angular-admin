@@ -12,6 +12,7 @@ import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 export class NavComponent implements OnInit {
   user!: User;
   signOutIcon = faRightFromBracket;
+  signTitle = 'Sign Out';
 
   constructor(private authService: AuthService) { }
 
