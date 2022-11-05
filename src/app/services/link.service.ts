@@ -12,6 +12,6 @@ export class LinkService {
   constructor(private http: HttpClient) { }
 
   all(id: number): Observable<Link[]> {
-    return this.http.get<Link[]>(`${environment.api}/users/${id}/links`)
+    return this.http.get<Link[]>(`${environment.api}/users/${id}/links`);
   }
 }

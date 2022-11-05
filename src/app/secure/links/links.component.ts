@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
 import { LinkService } from "../../services/link.service";
 import { ActivatedRoute } from "@angular/router";
-import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import { faDollarSign, faQrcode } from "@fortawesome/free-solid-svg-icons";
+import { faHashtag } from "@fortawesome/free-solid-svg-icons/faHashtag";
+import { User } from "../../interfaces/user";
 
 @Component({
   selector: 'app-links',
@@ -14,6 +16,9 @@ export class LinksComponent implements OnInit {
   dataSource = new MatTableDataSource();
   userID!: number;
   dollarIcon = faDollarSign;
+  count = faHashtag;
+  code = faQrcode;
+  user: User | undefined;
 
   constructor(private linkService: LinkService, private route: ActivatedRoute) { }
 
