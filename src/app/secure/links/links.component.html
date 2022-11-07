@@ -1,5 +1,5 @@
 <div class="mat-elevation-z8">
-  <table *ngIf="dataSource.data.length > 0" mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="table table-striped table-sm mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="table table-striped table-sm mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by id"><fa-icon [icon]="count"></fa-icon></th>
       <td mat-cell *matCellDef="let link"> {{link.id}} </td>
