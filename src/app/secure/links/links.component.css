@@ -5,3 +5,7 @@ th {
 td {
   font-size: medium;
 }
+
+th.mat-sort-header-sorted {
+  color: black;
+}
