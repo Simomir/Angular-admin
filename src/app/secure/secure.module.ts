@@ -16,6 +16,7 @@ import { ProductsComponent } from './products/products.component';
 import { MatSortModule } from "@angular/material/sort";
 import { ProductsFormComponent } from './products/products-form/products-form.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     MatButtonModule,
     MatSortModule,
     MatFormFieldModule,
+    MatInputModule,
   ]
 })
 export class SecureModule { }
