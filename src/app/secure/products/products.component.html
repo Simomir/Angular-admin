@@ -1,1 +1,15 @@
-<p>products works!</p>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="table table-striped table-sm mat-elevation-z8">
+    <ng-container matColumnDef="ID">
+      <th mat-header-cell *matHeaderCellDef>#</th>
+      <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[10, 20, 30, 50, 100]"
+                 showFirstLastButtons
+                 aria-label="Select page of products">
+  </mat-paginator>
+</div>
