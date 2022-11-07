@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
+import { ProductService } from "../../../services/product.service";
 
 @Component({
   selector: 'app-products-form',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 export class ProductsFormComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private productService: ProductService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -18,6 +19,10 @@ export class ProductsFormComponent implements OnInit {
       image: '',
       price: ''
     });
+  }
+
+  submit(): void {
+
   }
 
 }
