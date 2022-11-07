@@ -8,6 +8,7 @@ import { ProfileComponent } from "./secure/profile/profile.component";
 import { UsersComponent } from "./secure/users/users.component";
 import { LinksComponent } from "./secure/links/links.component";
 import { ProductsComponent } from "./secure/products/products.component";
+import { ProductsFormComponent } from "./secure/products/products-form/products-form.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'users', component: UsersComponent },
       { path: 'users/:id/links', component: LinksComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'products/create', component: ProductsFormComponent},
     ]
   },
   {
