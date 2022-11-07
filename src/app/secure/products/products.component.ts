@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from "@angular/material/table";
 
 @Component({
   selector: 'app-products',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  colums = ['id', 'image', 'title', 'description', 'price', 'action'];
+  dataSource = new MatTableDataSource();
 
   constructor() { }
 
