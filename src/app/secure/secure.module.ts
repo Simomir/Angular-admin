@@ -14,6 +14,7 @@ import { LinksComponent } from './links/links.component';
 import { MatButtonModule } from "@angular/material/button";
 import { ProductsComponent } from './products/products.component';
 import { MatSortModule } from "@angular/material/sort";
+import { ProductsFormComponent } from './products/products-form/products-form.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatSortModule } from "@angular/material/sort";
     UsersComponent,
     LinksComponent,
     ProductsComponent,
+    ProductsFormComponent,
   ],
   imports: [
     CommonModule,
