@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { ProductService } from "../../../services/product.service";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-products-form',
@@ -10,8 +10,15 @@ import { Router } from "@angular/router";
 })
 export class ProductsFormComponent implements OnInit {
   form!: FormGroup;
+  create!: boolean;
+  id!: number;
 
-  constructor(private formBuilder: FormBuilder, private productService: ProductService, private router: Router) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private productService: ProductService,
+    private router: Router,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -20,6 +27,15 @@ export class ProductsFormComponent implements OnInit {
       image: '',
       price: ''
     });
+
+    this.create = this.route.snapshot.data['create'];
+
+    if ( !this.create ) {
+      this.id = this.route.snapshot.params['id'];
+      this.productService.get(this.id).subscribe(
+        product => {this.form.patchValue(product)}
+      );
+    }
   }
 
   submit(): void {

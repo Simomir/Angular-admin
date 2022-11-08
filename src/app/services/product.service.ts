@@ -13,10 +13,15 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   all(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.endpoint)
+    return this.http.get<Product[]>(this.endpoint);
   }
 
   create(data: any): Observable<Product> {
     return this.http.post<Product>(this.endpoint, data);
   }
+
+  get(id: number): Observable<Product> {
+    return this.http.get<Product>(`${this.endpoint}/${id}`);
+  }
+
 }
