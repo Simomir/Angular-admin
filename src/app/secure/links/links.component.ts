@@ -7,6 +7,7 @@ import { faHashtag } from "@fortawesome/free-solid-svg-icons/faHashtag";
 import { User } from "../../interfaces/user";
 import { LiveAnnouncer } from "@angular/cdk/a11y";
 import { MatSort, Sort } from "@angular/material/sort";
+import { Order } from "../../interfaces/order";
 
 @Component({
   selector: 'app-links',
@@ -46,7 +47,7 @@ export class LinksComponent implements OnInit, AfterViewInit {
     }
   }
 
-  sum(orders: any[]): number {
+  sum(orders: Order[]): number {
     return orders.reduce((total, order) => total + order.total, 0);
   }
 
