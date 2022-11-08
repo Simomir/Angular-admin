@@ -27,5 +27,4 @@ export class ProductsFormComponent implements OnInit {
       () => this.router.navigate(['/products'])
     );
   }
-
 }
