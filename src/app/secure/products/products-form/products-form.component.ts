@@ -39,8 +39,10 @@ export class ProductsFormComponent implements OnInit {
   }
 
   submit(): void {
-    this.productService.create(this.form.getRawValue()).subscribe(
-      () => this.router.navigate(['/products'])
-    );
+    const method = this.create
+      ? this.productService.create(this.form.getRawValue())
+      : this.productService.update(this.id, this.form.getRawValue());
+
+    method.subscribe( () => this.router.navigate(['/products']) );
   }
 }
