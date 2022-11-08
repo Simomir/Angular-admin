@@ -21,6 +21,7 @@ const routes: Routes = [
       { path: 'users/:id/links', component: LinksComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'products/create', component: ProductsFormComponent},
+      { path: 'products/:id/edit', component: ProductsFormComponent},
     ]
   },
   {
