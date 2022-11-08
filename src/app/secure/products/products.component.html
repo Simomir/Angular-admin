@@ -21,7 +21,7 @@
     </ng-container>
     <ng-container matColumnDef="price">
       <th mat-header-cell *matHeaderCellDef>Price</th>
-      <td mat-cell *matCellDef="let product"> {{product.price}} </td>
+      <td mat-cell *matCellDef="let product"><fa-icon [icon]="dollarIcon"></fa-icon> {{product.price}} </td>
     </ng-container>
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Action</th>
