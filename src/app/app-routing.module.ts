@@ -9,6 +9,7 @@ import { UsersComponent } from "./secure/users/users.component";
 import { LinksComponent } from "./secure/links/links.component";
 import { ProductsComponent } from "./secure/products/products.component";
 import { ProductsFormComponent } from "./secure/products/products-form/products-form.component";
+import { OrdersComponent } from "./secure/orders/orders.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'products', component: ProductsComponent },
       { path: 'products/create', component: ProductsFormComponent, data: {create: true}},
       { path: 'products/:id/edit', component: ProductsFormComponent, data: {create: false}},
+      { path: 'orders', component: OrdersComponent },
     ]
   },
   {
