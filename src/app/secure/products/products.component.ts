@@ -3,6 +3,7 @@ import { MatTableDataSource } from "@angular/material/table";
 import { ProductService } from "../../services/product.service";
 import { MatPaginator } from "@angular/material/paginator";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import { Product } from "../../interfaces/product";
 
 @Component({
   selector: 'app-products',
@@ -27,6 +28,15 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
+  }
+
+  delete(id: number): void {
+    if(confirm('Are you sure?')) {
+      this.productService.delete(id).subscribe(
+        () => { this.dataSource.data = this.dataSource.data.filter(p => { // @ts-ignore
+          return p.id !== id; }); }
+      );
+    }
   }
 
 }
