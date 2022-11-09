@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from "../../services/order.service";
 import { Order } from "../../interfaces/order";
+import { faDollarSign } from "@fortawesome/free-solid-svg-icons/faDollarSign";
 
 @Component({
   selector: 'app-orders',
@@ -9,6 +10,7 @@ import { Order } from "../../interfaces/order";
 })
 export class OrdersComponent implements OnInit {
   orders: Order[] = [];
+  dollarSign = faDollarSign;
 
   constructor(private orderService: OrderService) { }
 
