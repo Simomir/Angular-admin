@@ -19,6 +19,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { OrdersComponent } from './orders/orders.component';
+import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { OrdersComponent } from './orders/orders.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonToggleModule,
+    MatExpansionModule,
   ]
 })
 export class SecureModule { }
