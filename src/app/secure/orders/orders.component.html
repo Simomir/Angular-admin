@@ -20,7 +20,7 @@
       <tr *ngFor="let item of order.order_items">
         <td>{{item.id}}</td>
         <td>{{item.product_title}}</td>
-        <td>{{item.price}}</td>
+        <td><fa-icon [icon]="dollarSign"></fa-icon> {{item.price}}</td>
         <td>{{item.quantity}}</td>
       </tr>
     </tbody>
